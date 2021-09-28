@@ -19,11 +19,13 @@ public class NumberOfThrees {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Введите трехзначное число: ");
-        int number = scanner.nextInt();
-        System.out.printf("Ваше число: %d%n", number);
-        System.out.println("Единицы: " + number % 10);
+        int number = scanner.nextInt(); // Создаем класс сканнер и вводим трехзначное число
+        System.out.println("Ваше число: " + number);
+        // Далее выводим количество единиц, десятков и сотен по формуле
+        System.out.println("Единицы: " + number % 10); 
         System.out.println("Десятки: " + number / 10 % 10);
         System.out.println("Сотни: " + number / 100);
+        // Находим сумма чисел
         int summa = (number % 10) + (number / 10 % 10) + (number / 100);
         System.out.println("Сумма чисел равна: " + summa);
     }
